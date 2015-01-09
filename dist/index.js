@@ -6,10 +6,10 @@ var _interopRequire = function (obj) {
 
 var isType = _interopRequire(require("isType"));
 
-var Pruno = function Pruno() {};
+var Shiv = function Shiv() {};
 
-Pruno.set = function (prop, value) {
+Shiv.set = function (prop, value) {
   Validator.validate(value, ["required"]);
 };
 
-module.exports = Pruno;
+module.exports = Shiv;

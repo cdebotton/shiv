@@ -22,7 +22,7 @@ var validations = {
 
 var ValidationDict = function ValidationDict() {
   if (this.constructor === ValidationDict) {
-    throw new Error("ValidationDict is an abstract class and should " + "not be instantiated...");
+    throw new Error("" + this.displayName + " is an abstract class and should " + "not be instantiated...");
   }
 };
 

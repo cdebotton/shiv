@@ -17,8 +17,8 @@ export default class ValidationDict {
   constructor() {
     if (this.constructor === ValidationDict) {
       throw new Error(
-        'ValidationDict is an abstract class and should ' +
-        'not be instantiated...'
+        `${this.displayName} is an abstract class and should ` +
+        `not be instantiated...`
       );
     }
   }

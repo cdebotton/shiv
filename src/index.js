@@ -1,6 +1,6 @@
 import isType from 'isType';
 
-export default class Pruno {
+export default class Shiv {
   constructor() {
 
   }
