@@ -1,0 +1,28 @@
+{
+  "name": "shiv",
+  "version": "0.0.1",
+  "description": "A lightwight but powerful server environment written in JavaScript on top of the Koa framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cdebotton/shiv.git"
+  },
+  "keywords": [
+    "shiv",
+    "koa",
+    "server",
+    "node"
+  ],
+  "author": "Christian de Botton <debotton@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cdebotton/shiv/issues"
+  },
+  "homepage": "https://github.com/cdebotton/shiv",
+  "dependencies": {
+    "koa": "^0.14.0"
+  }
+}
