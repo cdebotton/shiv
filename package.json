@@ -2,7 +2,7 @@
   "name": "shiv",
   "version": "0.0.1",
   "description": "A lightwight but powerful server environment written in JavaScript on top of the Koa framework.",
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,8 +23,13 @@
   },
   "homepage": "https://github.com/cdebotton/shiv",
   "dependencies": {
+    "chai": "^1.10.0",
     "koa": "^0.14.0",
     "require-dir": "^0.1.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "pruno": "^1.9.0",
+    "should": "^4.4.4"
+  }
 }
