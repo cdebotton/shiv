@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * invariant -- Throw error unless assertion passes.
  * @param  {bool} Assertion that must be met.
@@ -6,13 +8,15 @@
  * @return {void}
  */
 
-let invariant = function(assertion, message) {
+let invariant = function (assertion, message) {
   if (assertion !== true) {
     var args = [].slice.call(arguments);
     var params = args.slice(2);
 
-    throw new Error(message.replace(/%s/g, (str) => params.shift()));
+    throw new Error(message.replace(/%s/g, function (str) {
+      return params.shift();
+    }));
   }
-}
+};
 
-export default invariant;
+module.exports = invariant;

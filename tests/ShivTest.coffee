@@ -1,10 +1,22 @@
-shiv = require '../src'
+shiv = null
+koa = require 'koa'
 
 describe 'Shiv', ->
-  # describe '#set()', ->
-    # beforeEach -> @shiv = new shiv
+  beforeEach -> shiv = require '../src'
 
-    # it 'should return the instance of shiv', ->
-    #   shiv = @shiv.set 'test', true
-    #   @shiv.should.equal shiv
-  console.log new shiv()
+  it 'should store an instance of koa in it\'s #app parameter', ->
+    shiv.app.should.be.an.instanceOf koa
+
+  describe '#get(...)', ->
+    beforeEach -> shiv = require '../src'
+
+    it 'should be able to get properties', ->
+      shiv.map.foo = 'bar'
+      shiv.get('foo').should.equal 'bar'
+
+  describe '#set(...)', ->
+    beforeEach -> shiv = require '../src'
+
+    it 'should be able to set properties', ->
+      shiv.set('foo', 'bar')
+      shiv.map.foo.should.equal 'bar'

@@ -1,14 +1,17 @@
 'use strict';
 
-// var koa = require('koa');
-// var DataMap = require('./DataMap');
+import koa from 'koa';
+import DataMap from './DataMap';
 
-function Shiv(opts) {
-  // DataMap.call(this, opts);
-  // var app = koa();
-  // console.log(app);
-};
+class Shiv {
+  constructor() {
+    Object.assign(Shiv.prototype, DataMap.prototype);
+    DataMap.call(this);
 
-// Shiv.prototype = Object.assign({}, Shiv.prototype, DataMap.prototype);
+    this.app = new koa();
 
-module.exports = Shiv;
+    return this;
+  }
+}
+
+export default new Shiv();
